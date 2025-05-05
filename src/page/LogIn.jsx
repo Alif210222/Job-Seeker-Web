@@ -1,13 +1,63 @@
-import React from 'react';
+import React, { use } from 'react';
+import { Link, useNavigate, useNavigation } from 'react-router';
+import { AuthContext } from '../AuthProvider/AuthContext';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../AuthProvider/firebase.config';
 
 const LogIn = () => {
+    const {loginUser,setUser} = use(AuthContext)
+    const navigate = useNavigate()
+    const location = useNavigation()
+    
+    
+
+          // login with google
+    const provider = new GoogleAuthProvider
+
+    const handleGoogleLogin =()=>{
+        signInWithPopup(auth , provider )
+           .then(result =>{
+            //  console.log(result)
+             setUser(result.user)
+            //  navigate(location?.state || "/")
+            navigate("/")
+            })  
+            .catch(error=>{
+             console.log(error)
+            })
+
+          }
 
 
 
- // google login function
-    const handleGoogleLogin=()=>{
-         console.log("from google login")
-    }
+
+// log in function 
+     const handleLogin=(e)=>{
+          e.preventDefault()
+
+          const email = e.target.email.value
+          const password = e.target.password.value
+        //   console.log(email,password)
+
+          // login with email & pass 
+          loginUser(email,password)
+          .then(result =>{
+            const user = result.user
+            // console.log(user)
+            setUser(user)
+            // navigate(location?.state || "/")
+            navigate("/")
+
+
+          })
+          .catch(error=>{
+             console.log(error)
+          })
+
+
+
+     }
+
 
 
 
@@ -27,7 +77,9 @@ const LogIn = () => {
       <div className="card-body ">
         <form onSubmit={handleLogin} className="fieldset">
           <label className="label">Email</label>
-          <input type="email" className="input" name='email'  placeholder="Email" ref={emailRef} />
+
+                                  {/* user log in korle user er email reset password field e dite hobe    ref={emailRef} */}
+          <input type="email" className="input" name='email'  placeholder="Email" />
           <label className="label">Password</label>
           <input type="password" className="input" name='password' placeholder="Password" />
           {/* <p className='text-md text-red-600 '>{error} </p>
