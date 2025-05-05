@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../AuthProvider/AuthContext';
+import  userimg  from "../assets/user.png"
 
 const Navbar = () => {
+      const {user,logOutUser} = use(AuthContext)
+      // console.log(user)
 
     const links= <>
     
       <li  className='font-bold text-lg lg:mr-3'><NavLink className={({isActive})=> isActive ? "text-blue-600 border-b-2" : "" } to='/'>Home</NavLink></li>
       <li  className='font-bold text-lg lg:mr-3'><NavLink className={({isActive})=> isActive ? "text-blue-600 border-b-2" : "" } to='/about'>About</NavLink></li>
       <li  className='font-bold text-lg lg:mr-3'><NavLink className={({isActive})=> isActive ? "text-blue-600 border-b-2" : "" } to='/blog'>Blogs</NavLink></li>
+      <li  className='font-bold text-lg lg:mr-3'><NavLink className={({isActive})=> isActive ? "text-blue-600 border-b-2" : "" } to='/profile'>Profile</NavLink></li>
       
     
     
@@ -44,12 +49,29 @@ const Navbar = () => {
 
   <div className="navbar-end mr-14 space-x-4">
 
-    <Link to='/profile' className='btn text-lg border-2 border-sky-500 rounded-full w-10 h-10 hover:shadow-2xl hidden md:flex'></Link>
-    <Link to="/login" className="btn text-lg border-2 bg-sky-200 hover:bg-white border-sky-500 hover:shadow-2xl ">Login</Link>
+    {
+      user && (  
+        <Link to='/profile' className=' border border-sky-400  rounded-full   border-sky-500   hover:shadow-2xl hidden md:flex'>
+               <img className='w-10 h-10 rounded-full' src={user ? user.photoURL : userimg} alt="" />
+        </Link>
+
+
+      )
+    }
+
+    
+    <Link to="/login" className="btn text-lg border-2 bg-sky-200 hover:bg-white border-sky-500 hover:shadow-2xl ">{user ? <button onClick={logOutUser}>Logout</button> : <p>Login</p> }</Link>
+
+{
+  !user && (
+
     <Link to="/register" className="btn text-lg border-2 bg-sky-200 hover:bg-white border-sky-500 hover:shadow-2xl ">Register</Link>
-  </div>
-</div>
-        </div>
+  )
+}
+   
+      </div>
+   </div>
+ </div>
     );
 };
 

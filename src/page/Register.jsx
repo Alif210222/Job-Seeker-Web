@@ -1,9 +1,10 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
 
 const Register = () => {
-  const  {createUser} = use(AuthContext)
+  const  {createUser,updateUser,setUser} = use(AuthContext)
+  const navigate = useNavigate()
 
 
 
@@ -22,14 +23,21 @@ const Register = () => {
         createUser(email,password)
         .then(result=>{
             const user = result.user
-              console.log(user)
+              // console.log(user)
+
+      // update data 
+              updateUser({displayName : name , photoURL :photo })
+              .then(()=>{
+                setUser({...user , displayName : name , photoURL :photo})
+
+                navigate("/")
+              })
+
+
         })
         .catch(error=>{
              console.log(error)
         })
-
-        
-
 
 
 
@@ -64,7 +72,7 @@ const Register = () => {
           
           <button type='submit' className="btn btn-neutral mt-4 hover:bg-gray-600">Register</button>
         </form>
-        <p className='text-md font-bold mt-4'>If,you have no account , <Link to="/auth/login" className='text-pink-600 text-md font-bold underline'>Login</Link></p>
+        <p className='text-md font-bold mt-4'>If,you have no account , <Link to="/login" className='text-pink-600 text-md font-bold underline'>Login</Link></p>
       </div>
     </div>
   </div>

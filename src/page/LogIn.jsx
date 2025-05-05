@@ -19,8 +19,8 @@ const LogIn = () => {
            .then(result =>{
             //  console.log(result)
              setUser(result.user)
-            //  navigate(location?.state || "/")
-            navigate("/")
+             navigate(location?.state || "/")
+            // navigate("/")
             })  
             .catch(error=>{
              console.log(error)
@@ -45,8 +45,8 @@ const LogIn = () => {
             const user = result.user
             // console.log(user)
             setUser(user)
-            // navigate(location?.state || "/")
-            navigate("/")
+            navigate(location?.state || "/")
+            // navigate("/")
 
 
           })
@@ -100,7 +100,7 @@ const LogIn = () => {
 
 
 
-        <p className='text-md font-bold'>If,you have no account , <Link to="/auth/register" className='text-pink-600 text-md font-bold underline'>Register</Link></p>
+        <p className='text-md font-bold'>If,you have no account , <Link to="/register" className='text-pink-600 text-md font-bold underline'>Register</Link></p>
       </div>
     </div>
   </div>

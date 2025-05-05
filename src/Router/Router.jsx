@@ -10,6 +10,7 @@ import JobDetails from '../page/JobDetails.jsx';
 import MyProfile from '../page/MyProfile.jsx';
 import LogIn from '../page/LogIn.jsx';
 import Register from '../page/Register.jsx';
+import Loading from '../Components/Loading.jsx';
   
   
   
@@ -21,7 +22,8 @@ import Register from '../page/Register.jsx';
       children:[
         {
              index:true,Component:Home,
-             loader:()=>fetch("/jobdata.json")
+             loader:()=>fetch("/jobdata.json"),
+             hydrateFallbackElement:Loading
         },
         {
          path:"/about",
@@ -35,6 +37,7 @@ import Register from '../page/Register.jsx';
         {
             path:"/jobDetails/:id",
             loader:()=>fetch("/jobdata.json"),
+            hydrateFallbackElement:Loading,
             Component:JobDetails
         },
         {
