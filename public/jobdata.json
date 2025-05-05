@@ -22,6 +22,36 @@
                     "Responsive design skills",
                     "Version control with Git"
                 ]
+            },
+            {
+                "id": "job-002",
+                "title": "Financial Analyst",
+                "bannerImage": "https://media.istockphoto.com/id/1829918517/vector/programming-software-development-computer-technology-isometric-concept-coding-of-program.jpg?s=612x612&w=0&k=20&c=bZ3C2XvyJTQri6QEAGnf4MKCKl-u4ieIUosYu7Kkj68=",
+                "location": "On Site",
+                "salary": "$70,000 - $100,000",
+                "jobType": "Full-time",
+                "description": "Provide financial insights and strategy for company growth.",
+                "requirements": [
+                    "Strong knowledge of financial modeling",
+                    "Experience with Excel and financial software",
+                    "Degree in Finance or related field",
+                    "Excellent analytical skills"
+                ]
+            },
+            {
+                "id": "job-009",
+                "title": "Robotics Engineer",
+                "bannerImage": "https://media.istockphoto.com/id/2180381743/vector/system-maintenance-flat-vector-illustration-error-fixing-trouble-device-updating-software.jpg?s=612x612&w=0&k=20&c=r8bNdF4UnW4nQVYGHfPdQUuUV50jrHZidE2eKX82q_c=",
+                "location": "On Site",
+                "salary": "$95,000 - $120,000",
+                "jobType": "Full-time",
+                "description": "Design and develop robotic systems for industrial automation.",
+                "requirements": [
+                    "Degree in Robotics or Mechanical Engineering",
+                    "Experience with ROS and C++",
+                    "Knowledge of sensors and control systems",
+                    "Problem-solving and innovation skills"
+                ]
             }
            
         ]
@@ -37,8 +67,8 @@
             {
                 "id": "job-003",
                 "title": "Data Analyst",
-                "bannerImage": "https://media.istockphoto.com/id/2158810944/vector/programming-web-banner-best-programming-languages-technology-process-of-software-development.jpg?s=612x612&w=0&k=20&c=HPLlOcdsWacWHQ0PdleGLonbvqFlH5Nkrxsujkzxskg=",
-                "location": "Austin, TX",
+                "bannerImage": "https://media.istockphoto.com/id/2180381743/vector/system-maintenance-flat-vector-illustration-error-fixing-trouble-device-updating-software.jpg?s=612x612&w=0&k=20&c=r8bNdF4UnW4nQVYGHfPdQUuUV50jrHZidE2eKX82q_c=",
+                "location": "On Site",
                 "salary": "$60,000 - $80,000",
                 "jobType": "Full-time",
                 "description": "Analyze environmental data to help drive sustainability solutions.",
@@ -47,6 +77,21 @@
                     "Knowledge of data visualization tools",
                     "Familiarity with Python or R",
                     "Ability to interpret and communicate data insights"
+                ]
+            },
+            {
+                "id": "job-009",
+                "title": "Robotics Engineer",
+                "bannerImage": "https://media.istockphoto.com/id/1207217852/vector/programming-testing-app-on-different-devices-creation-software-and-coding-internet-pages-for.jpg?s=612x612&w=0&k=20&c=84TPoTRyO589B5rh1WvW0EQDbbPN_0ITkMsAO5ENz2g=",
+                "location": "On Site",
+                "salary": "$95,000 - $120,000",
+                "jobType": "Full-time",
+                "description": "Design and develop robotic systems for industrial automation.",
+                "requirements": [
+                    "Degree in Robotics or Mechanical Engineering",
+                    "Experience with ROS and C++",
+                    "Knowledge of sensors and control systems",
+                    "Problem-solving and innovation skills"
                 ]
             }
         ]
@@ -57,7 +102,7 @@
         "logo": "https://image.shutterstock.com/image-vector/people-goup-logotype-logo-general-260nw-669754087.jpg",
         "location": "New York, NY",
         "website": "https://healthsync.com",
-        "industry": "Healthcare IT",
+        "industry": "Healthcare IT Limited",
         "jobs": [
             {
                 "id": "job-004",
@@ -73,43 +118,7 @@
                     "Understanding of security best practices",
                     "Experience with Docker and cloud platforms"
                 ]
-            }
-           
-        ]
-    },
-    {
-        "id": 4,
-        "name": "FinEdge Corp.",
-        "logo": "https://image.shutterstock.com/image-vector/community-logo-teamwork-social-partnership-260nw-361771691.jpg",
-        "location": "Chicago, IL",
-        "website": "https://brightcart.com",
-        "industry": "Financial Services",
-        "jobs": [
-            {
-                "id": "job-006",
-                "title": "Financial Analyst",
-                "bannerImage": "https://media.istockphoto.com/id/1829918517/vector/programming-software-development-computer-technology-isometric-concept-coding-of-program.jpg?s=612x612&w=0&k=20&c=bZ3C2XvyJTQri6QEAGnf4MKCKl-u4ieIUosYu7Kkj68=",
-                "location": "Chicago, IL",
-                "salary": "$70,000 - $100,000",
-                "jobType": "Full-time",
-                "description": "Provide financial insights and strategy for company growth.",
-                "requirements": [
-                    "Strong knowledge of financial modeling",
-                    "Experience with Excel and financial software",
-                    "Degree in Finance or related field",
-                    "Excellent analytical skills"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "EduSpark Learning",
-        "logo": "https://img.icons8.com/?size=96&id=PmgBaT0a08zo&format=png",
-        "location": "Remote",
-        "website": "https://ollyo.com",
-        "industry": "E-Learning",
-        "jobs": [
+            },
             {
                 "id": "job-007",
                 "title": "Course Content Developer",
@@ -125,6 +134,89 @@
                     "Instructional design experience"
                 ]
             }
+           
+        ]
+    },
+    {
+        "id": 4,
+        "name": "FinEdge Corp.",
+        "logo": "https://image.shutterstock.com/image-vector/community-logo-teamwork-social-partnership-260nw-361771691.jpg",
+        "location": "Chicago, IL",
+        "website": "https://clutch.co/bd/developers/artificial-intelligence/robotics",
+        "industry": "Financial Services Limited",
+        "jobs": [
+            {
+                "id": "job-006",
+                "title": "Financial Analyst",
+                "bannerImage": "https://media.istockphoto.com/id/1829918517/vector/programming-software-development-computer-technology-isometric-concept-coding-of-program.jpg?s=612x612&w=0&k=20&c=bZ3C2XvyJTQri6QEAGnf4MKCKl-u4ieIUosYu7Kkj68=",
+                "location": "On Site",
+                "salary": "$70,000 - $100,000",
+                "jobType": "Full-time",
+                "description": "Provide financial insights and strategy for company growth.",
+                "requirements": [
+                    "Strong knowledge of financial modeling",
+                    "Experience with Excel and financial software",
+                    "Degree in Finance or related field",
+                    "Excellent analytical skills"
+                ]
+            },
+            {
+                "id": "job-001",
+                "title": "Frontend Developer",
+                "bannerImage": "https://media.istockphoto.com/id/2160851062/photo/asian-and-indian-developer-devops-team-discussion-about-coding-promgram-with-software.jpg?s=612x612&w=0&k=20&c=JHxuXx2l89YFsVWP9O8jmTILXOHypkYexXAjATw_Z30=",
+                "location": "Remote",
+                "salary": "$75,000 - $95,000",
+                "jobType": "Full-time",
+                "description": "Build user-facing web applications with modern JavaScript frameworks.",
+                "requirements": [
+                    "Proficient in HTML, CSS, and JavaScript",
+                    "Experience with React or Vue.js",
+                    "Familiarity with RESTful APIs",
+                    "Responsive design skills",
+                    "Version control with Git"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "EduSpark Learning",
+        "logo": "https://img.icons8.com/?size=96&id=PmgBaT0a08zo&format=png",
+        "location": "Bangladesh",
+        "website": "https://ollyo.com",
+        "industry": "E-Learning  platform Ltd. ",
+        "jobs": [
+            {
+                "id": "job-007",
+                "title": "Course Content Developer",
+                "bannerImage": "https://media.istockphoto.com/id/1593529081/vector/full-stack-developer-programmer-who-can-work-with-software-and-hardware-part-of-the-service.jpg?s=612x612&w=0&k=20&c=fb4MT_dS11ardFe9YXeqDaJulfMhCo2PB5q9ITa9Tp0=",
+                "location": "Remote",
+                "salary": "$50,000 - $75,000",
+                "jobType": "Part-time",
+                "description": "Design and create educational content for online courses.",
+                "requirements": [
+                    "Excellent writing and editing skills",
+                    "Subject matter expertise",
+                    "Familiarity with LMS platforms",
+                    "Instructional design experience"
+                ]
+            },
+            {
+                "id": "job-001",
+                "title": "Frontend Developer",
+                "bannerImage": "https://media.istockphoto.com/id/2160851062/photo/asian-and-indian-developer-devops-team-discussion-about-coding-promgram-with-software.jpg?s=612x612&w=0&k=20&c=JHxuXx2l89YFsVWP9O8jmTILXOHypkYexXAjATw_Z30=",
+                "location": "Remote",
+                "salary": "$75,000 - $95,000",
+                "jobType": "Full-time",
+                "description": "Build user-facing web applications with modern JavaScript frameworks.",
+                "requirements": [
+                    "Proficient in HTML, CSS, and JavaScript",
+                    "Experience with React or Vue.js",
+                    "Familiarity with RESTful APIs",
+                    "Responsive design skills",
+                    "Version control with Git"
+                ]
+            }
             
         ]
     },
@@ -133,14 +225,14 @@
         "name": "AutoMinds Robotics",
         "logo": "https://img.icons8.com/?size=96&id=SEaRzsrTiz6P&format=png",
         "location": "Detroit, MI",
-        "website": "https://brightcart.com",
-        "industry": "Robotics and AI",
+        "website": "https://clutch.co/bd/developers/artificial-intelligence/robotics",
+        "industry": "Robotics and AI Generator",
         "jobs": [
             {
                 "id": "job-009",
                 "title": "Robotics Engineer",
                 "bannerImage": "https://media.istockphoto.com/id/2180381743/vector/system-maintenance-flat-vector-illustration-error-fixing-trouble-device-updating-software.jpg?s=612x612&w=0&k=20&c=r8bNdF4UnW4nQVYGHfPdQUuUV50jrHZidE2eKX82q_c=",
-                "location": "Detroit, MI",
+                "location": "On Site",
                 "salary": "$95,000 - $120,000",
                 "jobType": "Full-time",
                 "description": "Design and develop robotic systems for industrial automation.",
@@ -159,13 +251,13 @@
         "logo": "https://img.icons8.com/?size=96&id=FqJn068NXvCQ&format=png",
         "location": "Detroit, MI",
         "website": "https://ollyo.com",
-        "industry": "Robotics and AI",
+        "industry": "Robotics and AI Generataor",
         "jobs": [
             {
                 "id": "job-009",
                 "title": "Robotics Engineer",
-                "bannerImage": "https://media.istockphoto.com/id/1724322224/vector/project-startup-preparing-to-launch-a-new-successful-project-idea-analysis-planning-strategy.jpg?s=612x612&w=0&k=20&c=eU5ldcghg5hbEglnLDqoe7M4IMqcClJHBNjOohw-KN4=",
-                "location": "Detroit, MI",
+                "bannerImage": "https://media.istockphoto.com/id/2180381743/vector/system-maintenance-flat-vector-illustration-error-fixing-trouble-device-updating-software.jpg?s=612x612&w=0&k=20&c=r8bNdF4UnW4nQVYGHfPdQUuUV50jrHZidE2eKX82q_c=",
+                "location": "On Site",
                 "salary": "$95,000 - $120,000",
                 "jobType": "Full-time",
                 "description": "Design and develop robotic systems for industrial automation.",
@@ -175,22 +267,37 @@
                     "Knowledge of sensors and control systems",
                     "Problem-solving and innovation skills"
                 ]
+            },
+            {
+                "id": "job-007",
+                "title": "Course Content Developer",
+                "bannerImage": "https://media.istockphoto.com/id/1593529081/vector/full-stack-developer-programmer-who-can-work-with-software-and-hardware-part-of-the-service.jpg?s=612x612&w=0&k=20&c=fb4MT_dS11ardFe9YXeqDaJulfMhCo2PB5q9ITa9Tp0=",
+                "location": "Remote",
+                "salary": "$50,000 - $75,000",
+                "jobType": "Part-time",
+                "description": "Design and create educational content for online courses.",
+                "requirements": [
+                    "Excellent writing and editing skills",
+                    "Subject matter expertise",
+                    "Familiarity with LMS platforms",
+                    "Instructional design experience"
+                ]
             }
         ]
     },
     {
         "id": 8,
         "name": "AutoMinds Robotics",
-        "logo": "https://img.icons8.com/?size=96&id=FqJn068NXvCQ&format=png",
+        "logo": "https://image.shutterstock.com/image-vector/community-logo-teamwork-social-partnership-260nw-361771691.jpg",
         "location": "Detroit, MI",
-        "website": "https://brightcart.com",
-        "industry": "Robotics and AI",
+        "website": "https://clutch.co/bd/developers/artificial-intelligence/robotics",
+        "industry": "Software Development ",
         "jobs": [
             {
                 "id": "job-009",
                 "title": "Robotics Engineer",
                 "bannerImage": "https://media.istockphoto.com/id/1502289545/vector/technology-of-software-development-web-design-programming-concept-program-code-on-screen.jpg?s=612x612&w=0&k=20&c=IjkXl6uCuINBjLKmCq95TnhSQaHSAcJE2HzcNK42tv4=",
-                "location": "Detroit, MI",
+                "location": "On Site",
                 "salary": "$95,000 - $120,000",
                 "jobType": "Full-time",
                 "description": "Design and develop robotic systems for industrial automation.",
@@ -199,6 +306,22 @@
                     "Experience with ROS and C++",
                     "Knowledge of sensors and control systems",
                     "Problem-solving and innovation skills"
+                ]
+            },
+            {
+                "id": "job-001",
+                "title": "Frontend Developer",
+                "bannerImage": "https://media.istockphoto.com/id/2160851062/photo/asian-and-indian-developer-devops-team-discussion-about-coding-promgram-with-software.jpg?s=612x612&w=0&k=20&c=JHxuXx2l89YFsVWP9O8jmTILXOHypkYexXAjATw_Z30=",
+                "location": "Remote",
+                "salary": "$75,000 - $95,000",
+                "jobType": "Full-time",
+                "description": "Build user-facing web applications with modern JavaScript frameworks.",
+                "requirements": [
+                    "Proficient in HTML, CSS, and JavaScript",
+                    "Experience with React or Vue.js",
+                    "Familiarity with RESTful APIs",
+                    "Responsive design skills",
+                    "Version control with Git"
                 ]
             }
         ]

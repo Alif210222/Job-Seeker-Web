@@ -33,21 +33,24 @@ const Home = () => {
                   <p className='md:w-[600px] md:ml-98 mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'> Choose your favourite company </p>
         
                    <div className='flex items-center gap-10 mt-14'>
-                     <h1 className='text-3xl font-bold underline ml-6'>Featured Job</h1>
+                     <h1 className='text-3xl font-bold underline ml-6'>All Company :</h1>
 
            
                   </div>
                 </div>
+
+                {/* company section  */}
+                <div className='p-8'>
+                           <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-2 border-sky-300 rounded-2xl p-6 mt-4 '>
+
+                             {
+                                  data.map(company=> <JobSection company={company}></JobSection>)
+                             }
+
+                          </div>
+                </div>
               
-               <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-2 border-sky-300 rounded-2xl p-6 mt-10'>
-
-                {
-                    data.map(company=> <JobSection company={company}></JobSection>)
-                }
-
-                    
-                       
-               </div>
+               
               
         </div>
     );

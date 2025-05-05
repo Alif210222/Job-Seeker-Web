@@ -43,8 +43,10 @@ const Navbar = () => {
    
 
   <div className="navbar-end mr-14 space-x-4">
-    <Link to='/profile' className='btn text-lg border-2 border-sky-500 hover:shadow-2xl hidden md:flex'>Profile</Link>
-    <Link className="btn text-lg border-2 border-sky-500 hover:shadow-2xl ">Login</Link>
+
+    <Link to='/profile' className='btn text-lg border-2 border-sky-500 rounded-full w-10 h-10 hover:shadow-2xl hidden md:flex'></Link>
+    <Link to="/login" className="btn text-lg border-2 bg-sky-200 hover:bg-white border-sky-500 hover:shadow-2xl ">Login</Link>
+    <Link to="/register" className="btn text-lg border-2 bg-sky-200 hover:bg-white border-sky-500 hover:shadow-2xl ">Register</Link>
   </div>
 </div>
         </div>
