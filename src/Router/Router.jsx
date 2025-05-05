@@ -5,12 +5,13 @@ import Root from '../Components/Root.jsx';
 import Home from '../page/Home.jsx';
 import About from '../page/About.jsx';
 import Blog from '../page/Blog.jsx';
-import Profile from '../page/Profile.jsx';
+
 import JobDetails from '../page/JobDetails.jsx';
 import MyProfile from '../page/MyProfile.jsx';
 import LogIn from '../page/LogIn.jsx';
 import Register from '../page/Register.jsx';
 import Loading from '../Components/Loading.jsx';
+import PrivetRoute from '../AuthProvider/PrivetRoute.jsx';
   
   
   
@@ -23,7 +24,7 @@ import Loading from '../Components/Loading.jsx';
         {
              index:true,Component:Home,
              loader:()=>fetch("/jobdata.json"),
-             hydrateFallbackElement:Loading
+            HydrateFallback:Loading
         },
         {
          path:"/about",
@@ -37,12 +38,14 @@ import Loading from '../Components/Loading.jsx';
         {
             path:"/jobDetails/:id",
             loader:()=>fetch("/jobdata.json"),
-            hydrateFallbackElement:Loading,
+            HydrateFallback:Loading,
             Component:JobDetails
         },
         {
             path:"/profile",
-            Component:MyProfile
+            HydrateFallback:Loading,
+            element:<PrivetRoute><MyProfile></MyProfile></PrivetRoute>
+           
         },
         {
             path:"/login",

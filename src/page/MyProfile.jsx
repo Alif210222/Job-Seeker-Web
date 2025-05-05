@@ -2,12 +2,16 @@ import React, { use } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import userimg from "../assets/user.png"
+import Loading from '../Components/Loading';
 
 const MyProfile = () => {
-      const {user} = use(AuthContext)
+      const {user,loading} = use(AuthContext)
       // console.log(user)
       // const photo = user.photoURL
       
+      if(loading){
+        return <Loading></Loading>
+      }
 
 
     return (
