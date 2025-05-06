@@ -4,6 +4,7 @@ import banner from ".././assets/job seeker banner.avif"
 import JobSection from '../Components/JobSection';
 import { useLoaderData } from 'react-router';
 import Counter from '../Components/Counter';
+import WebSiteWork from '../Components/WebSiteWork';
 
 
 
@@ -20,8 +21,7 @@ const Home = () => {
              <div className='w-full md:flex justify-between gap-6 md:p-10 p-3 items-center border-2 border-sky-300 rounded-2xl bg-sky-100'>
                 <div className=''>
                     <h1 className='md:text-3xl lg:text-6xl font-semibold mb-8'>Find your dream <br /> job today.....</h1>
-                    <p className='mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente voluptatibus nisi unde nihil quo delectus odio
-                         tempora excepturi ?</p>
+                    <p className='mb-8'>Discover thousands of jobs tailored to your skills and goals. Whether you're starting out or looking for a fresh start, we’re here to help you take the next step in your career journey.</p>
 
                          <button className='md:text-xl border-2 border-white bg-gray-500 p-3 rounded-2xl shadow-2xl hover:bg-gray-400 hover:text-white duration-300'>Explore Now</button>
                 </div>
@@ -30,6 +30,13 @@ const Home = () => {
 
              {/* after banner */}
 
+           {/* how to website work  */}
+
+              <WebSiteWork></WebSiteWork>
+
+
+
+          {/* job section  */}
                 <div className='mt-36'>
                   <p className='lg:w-[600px]  lg:ml-98 mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'> Choose your favourite company </p>
         
@@ -52,7 +59,7 @@ const Home = () => {
                 </div>
               
                <div className='mt-18 '>
-                   {/* <Counter></Counter> */}
+                   <Counter></Counter>
                </div>
               
         </div>
