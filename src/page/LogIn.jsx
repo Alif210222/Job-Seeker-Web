@@ -90,9 +90,9 @@ const LogIn = () => {
           <input type="email" className="input" name='email'  placeholder="Email" />
           <label className="label">Password</label>
           <input type="password" className="input" name='password' placeholder="Password" />
-          <p className='text-md text-red-600 '> password </p>
+          {/* <p className='text-md text-red-600 '> password </p> */}
           <Link to="/resetPage">
-                  <button onClick={handleResetPass} ><a className="link link-hover">Forgot password?</a></button>
+                  <button onClick={handleResetPass} ><a className="link link-hover text-red-500">Forgot password?</a></button>
           </Link>
           
 

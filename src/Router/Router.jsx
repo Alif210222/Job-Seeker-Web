@@ -66,6 +66,10 @@ import ErrorPage from '../page/ErrorPage.jsx';
         {
           path:"/resetPage",
           Component:ResetPass
+        },
+        {
+          path:"/errorpage",
+          Component:ErrorPage
         }
        
 
