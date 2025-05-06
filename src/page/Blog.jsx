@@ -1,9 +1,6 @@
 import React from "react";
 
-import employone from "../assets/employ1.jpeg"
-import employtwo from "../assets/emloy-2.jpg"
-import employthree from "../assets/eploy3.jpg"
-import employfour from  "../assets/employ 4.jpeg"
+import { Helmet } from "react-helmet-async";
   
 const blogPosts = [
   {
@@ -34,6 +31,11 @@ const blogPosts = [
 
 const Blog = () => {
   return (
+    <div>
+          <Helmet>
+              <title>Blog page</title>
+          </Helmet>
+  
     <section className="bg-gray-50 py-16 px-6 sm:px-10 md:px-20 lg:px-32">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-blue-600 mb-12 text-center">Latest from Our Blog</h2>
@@ -62,6 +64,7 @@ const Blog = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

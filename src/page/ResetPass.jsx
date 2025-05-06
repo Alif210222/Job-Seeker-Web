@@ -32,7 +32,7 @@ const ResetPass = () => {
                <form onSubmit={handleReset}>
                 <h1 className='text-xl font-bold mb-6'>Enter your backup email </h1>
                <label className="label ">Email </label>
-               <input type="email"   className="input" name="email" placeholder="Email" required/>
+               <input type="email" value={user?.email}  className="input" name="email" placeholder="Email" required/>
                       
                 </form>
 

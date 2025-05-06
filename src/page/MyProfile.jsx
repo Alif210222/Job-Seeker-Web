@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import userimg from "../assets/user.png"
 import Loading from '../Components/Loading';
+import { Helmet } from 'react-helmet-async';
 
 const MyProfile = () => {
       const {user,loading} = use(AuthContext)
@@ -16,6 +17,9 @@ const MyProfile = () => {
 
     return (
         <div>
+            <Helmet>
+              <title>Profile</title>
+            </Helmet>
             <div className='text-center  '>
                 <h1 className='text-3xl font-semibold text-sky-500 mt-10 underline'>User's Profile</h1>
                 <div className='flex justify-center mt-10 mb-14' >

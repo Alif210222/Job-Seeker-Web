@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const cards = [
@@ -20,8 +21,16 @@ const About = () => {
   ];
 
   return (
+
+    <div>
+       <Helmet>
+          <title>About page</title>
+       </Helmet>
+   
     <section className="bg-white py-16 px-6 sm:px-10 md:px-20 lg:px-32">
+        
       <div className="max-w-6xl mx-auto">
+     
         <h2 className="text-4xl font-bold text-blue-600 mb-6">About Us</h2>
         <p className="text-lg text-gray-700 mb-4">
           Welcome to <span className="font-semibold text-blue-500">Job Seeker BD</span>, your go-to platform for discovering exciting career opportunities.
@@ -47,6 +56,8 @@ const About = () => {
         </div>
       </div>
     </section>
+
+    </div>
   );
 };
 

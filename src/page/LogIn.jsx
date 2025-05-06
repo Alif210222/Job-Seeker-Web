@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
+import { Helmet } from 'react-helmet-async';
 
 const LogIn = () => {
     const {loginUser,setUser} = use(AuthContext)
@@ -64,7 +65,7 @@ const LogIn = () => {
                 console.log("reset password clicked")
             }
 
-
+         //reset password 
 
 
 
@@ -72,9 +73,9 @@ const LogIn = () => {
     return (
         <div>
             <div>
-            {/* <Helmet>
+            <Helmet>
                <title>Login</title>
-              </Helmet> */}
+              </Helmet>
 
 
              <div className="hero bg-[#f0eeee] min-h-screen">

@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const SingleJobDetailsCart = ({job,findJob}) => {
     //    console.log(job)
     return (
         <div className='border-2 rounded-2xl bg-sky-100 border-sky-300 p-3'>
+
+              <Helmet>
+                <title>Company Details</title>
+              </Helmet>
            
             <div className="  md:flex items-center  bg-base-100  shadow-sm border  border-sky-300 rounded-lg ">
   <figure className='p-2'>

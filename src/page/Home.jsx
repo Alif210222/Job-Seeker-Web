@@ -5,6 +5,7 @@ import JobSection from '../Components/JobSection';
 import { useLoaderData } from 'react-router';
 import Counter from '../Components/Counter';
 import WebSiteWork from '../Components/WebSiteWork';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -18,6 +19,12 @@ const Home = () => {
 
     return (
         <div className='md:p-16 p-6'>
+               
+               <Helmet>
+                  <title>Home page </title>
+               </Helmet>
+
+
              <div className='w-full md:flex justify-between gap-6 md:p-10 p-3 items-center border-2 border-sky-300 rounded-2xl bg-sky-100'>
                 <div className=''>
                     <h1 className='md:text-3xl lg:text-6xl font-semibold mb-8'>Find your dream <br /> job today.....</h1>
