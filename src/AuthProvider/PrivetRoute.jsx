@@ -7,6 +7,7 @@ const PrivetRoute = ({children}) => {
       const {user,loading} = use(AuthContext)
 
       const location = useLocation()
+    //   console.log(location.pathname)
 
       if(loading){
         return <Loading></Loading>
@@ -19,7 +20,9 @@ const PrivetRoute = ({children}) => {
 
 
     return (
-       <Navigate state={location.pathname} to="/login"></Navigate>
+
+
+       <Navigate  state={location.pathname} to="/login"></Navigate>
     );
 };
 

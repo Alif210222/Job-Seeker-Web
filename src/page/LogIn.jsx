@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link, useNavigate, useNavigation } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
@@ -7,7 +7,8 @@ import { auth } from '../AuthProvider/firebase.config';
 const LogIn = () => {
     const {loginUser,setUser} = use(AuthContext)
     const navigate = useNavigate()
-    const location = useNavigation()
+    const location = useLocation()
+    // console.log(location)
     
     
 
@@ -45,7 +46,7 @@ const LogIn = () => {
             const user = result.user
             // console.log(user)
             setUser(user)
-            navigate(location?.state || "/")
+            navigate(location?.state || "/" )
             // navigate("/")
 
 

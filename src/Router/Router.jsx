@@ -43,7 +43,7 @@ import PrivetRoute from '../AuthProvider/PrivetRoute.jsx';
         },
         {
             path:"/profile",
-            HydrateFallback:Loading,
+            
             element:<PrivetRoute><MyProfile></MyProfile></PrivetRoute>
            
         },
