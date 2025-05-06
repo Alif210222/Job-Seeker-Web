@@ -20,9 +20,9 @@ const MyProfile = () => {
             <Helmet>
               <title>Profile</title>
             </Helmet>
-            <div className='text-center  '>
-                <h1 className='text-3xl font-semibold text-sky-500 mt-10 underline'>User's Profile</h1>
-                <div className='flex justify-center mt-10 mb-14' >
+            <div className='text-center  p-10'>
+                <h1 className='text-3xl font-semibold text-sky-500  underline mb-10'>User's Profile</h1>
+                <div className='flex justify-center ' >
                 <div className="card  w-96 shadow-sm border-2 border-sky-400  bg-sky-100">
   <figure className="px-10 pt-10">
     <img className="border border-amber-700 w-50 h-50 rounded-full p-2"

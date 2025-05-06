@@ -9,9 +9,11 @@ const Root = () => {
             <header >
                <Navbar  ></Navbar>
             </header>
-           
-            <Outlet></Outlet>
+           <div className='bg-gray-100'>
+              <Outlet></Outlet>
 
+           </div>
+            
 
             <Footer></Footer>
     <ScrollRestoration></ScrollRestoration>

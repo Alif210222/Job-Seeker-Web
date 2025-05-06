@@ -35,15 +35,9 @@ const Banner = () => {
     <div
       ref={bannerRef}
       style={{
-        // backgroundColor: '#61dafb',
-        // padding: '40px',
-        // borderRadius: '10px',
+      
         boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-        // margin: '100px auto',
-        // maxWidth: '400px',
-        // textAlign: 'center',
-        // fontSize: '24px',
-        // fontWeight: 'bold',
+      
       }}
     >
 
@@ -54,7 +48,7 @@ const Banner = () => {
                           <h1 className='md:text-3xl lg:text-6xl font-semibold mb-8'>Find your dream <br /> job today.....</h1>
                           <p className='mb-8'>Discover thousands of jobs tailored to your skills and goals. Whether you're starting out or looking for a fresh start, we’re here to help you take the next step in your career journey.</p>
       
-                               <button className='md:text-xl border-2 border-white bg-gray-500 p-3 rounded-2xl shadow-2xl hover:bg-gray-400 hover:text-white duration-300'>Explore Now</button>
+                               <button className='md:text-xl border-2 border-white bg-gray-200 p-3 rounded-2xl shadow-2xl hover:bg-gray-400 hover:text-white duration-300'>Explore Now</button>
                       </div>
                       <img className='lg:w-[700px] md:w-[400px] w-full lg:h-[450px] md:h-[400px] mt-6 md:mt-0'  src={banner} alt="" />
                    </div>

@@ -50,15 +50,15 @@ const SingleJobDetailsCart = ({job,findJob}) => {
             <div   className="  md:flex items-center  bg-base-100  shadow-sm border  border-sky-300 rounded-lg ">
   <figure className='p-2'>
     <img
-    className='md:h-[250px] md:w-[700px]'
+    className='md:h-[250px] md:w-[800px]'
       src={job.bannerImage}
       alt="Shoes" />
   </figure>
   <div className="card-body ">
-    <h2 className="card-title ">{job.title}</h2>
-    <h3 className='mt-2 font-bold'>{job.jobType}</h3>
-    <h4 className='font-semibold text-red-500'>{job.salary}</h4>
-    <p className='font-semibold text-red-500'>{job.location}</p>
+    <h2 className="card-title ">Position : {job.title}</h2>
+    <h3 className='mt-2 font-bold'>Type : {job.jobType}</h3>
+    <h4 className='font-semibold text-red-500'>Salary : {job.salary}</h4>
+    <p className='font-semibold text-red-500'>Work : {job.location}</p>
     <p className='mt-4'>We need a employ for this post.If you are interested and <span className='font-bold '>  have enough skill about this work .</span> please click on details button and see about job details .If you interested then  apply  for this post.</p>
   
 

@@ -7,6 +7,7 @@ import Counter from '../Components/Counter';
 import WebSiteWork from '../Components/WebSiteWork';
 import { Helmet } from 'react-helmet-async';
 import Banner from '../Components/MainBanner';
+import TestimonialsSection from '../Components/TestimonialsSection';
 // import Banner from '../Components/Banner';
 
 
@@ -29,22 +30,9 @@ const Home = () => {
                {/* this is banner  */}
 
                  <Banner />
-     
     
-             {/* <div className='w-full md:flex justify-between gap-6 md:p-10 p-3 items-center border-2 border-sky-300 rounded-2xl bg-sky-100'>
-                <div className=''>
-                    <h1 className='md:text-3xl lg:text-6xl font-semibold mb-8'>Find your dream <br /> job today.....</h1>
-                    <p className='mb-8'>Discover thousands of jobs tailored to your skills and goals. Whether you're starting out or looking for a fresh start, we’re here to help you take the next step in your career journey.</p>
 
-                         <button className='md:text-xl border-2 border-white bg-gray-500 p-3 rounded-2xl shadow-2xl hover:bg-gray-400 hover:text-white duration-300'>Explore Now</button>
-                </div>
-                <img className='lg:w-[700px] md:w-[400px] w-full lg:h-[450px] md:h-[400px] mt-6 md:mt-0'  src={banner} alt="" />
-             </div> */}
-
-
-
-
-             {/* after banner */}
+           
 
            {/* how to website work  */}
 
@@ -53,7 +41,7 @@ const Home = () => {
 
 
           {/* job section  */}
-                <div className='mt-36'>
+                <div className='mt-40'>
                   <p className='lg:w-[600px]  lg:ml-98 mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'> Choose your favourite company </p>
         
                    <div className='flex items-center gap-10 mt-14'>
@@ -76,6 +64,8 @@ const Home = () => {
 
                    
                    <Counter></Counter>
+
+                   <TestimonialsSection></TestimonialsSection>
                
               
         </div>
