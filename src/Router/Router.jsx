@@ -12,6 +12,9 @@ import LogIn from '../page/LogIn.jsx';
 import Register from '../page/Register.jsx';
 import Loading from '../Components/Loading.jsx';
 import PrivetRoute from '../AuthProvider/PrivetRoute.jsx';
+import ResetPass from '../page/ResetPass.jsx';
+import UpdateProfile from '../page/UpdateProfile.jsx';
+import ErrorPage from '../page/ErrorPage.jsx';
   
   
   
@@ -20,6 +23,7 @@ import PrivetRoute from '../AuthProvider/PrivetRoute.jsx';
     {
       path: "/",
       Component:Root,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
              index:true,Component:Home,
@@ -48,12 +52,20 @@ import PrivetRoute from '../AuthProvider/PrivetRoute.jsx';
            
         },
         {
+          path:"/updateProfile",
+          Component:UpdateProfile
+        },
+        {
             path:"/login",
             Component:LogIn
         },
         {
             path:"/register",
             Component:Register
+        },
+        {
+          path:"/resetPage",
+          Component:ResetPass
         }
        
 

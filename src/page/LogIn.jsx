@@ -59,6 +59,13 @@ const LogIn = () => {
 
      }
 
+           // reset password section 
+            const handleResetPass = ()=>{
+                console.log("reset password clicked")
+            }
+
+
+
 
 
 
@@ -83,8 +90,11 @@ const LogIn = () => {
           <input type="email" className="input" name='email'  placeholder="Email" />
           <label className="label">Password</label>
           <input type="password" className="input" name='password' placeholder="Password" />
-          {/* <p className='text-md text-red-600 '>{error} </p>
-          <button onClick={handleResetPass}><a className="link link-hover">Forgot password?</a></button> */}
+          <p className='text-md text-red-600 '> password </p>
+          <Link to="/resetPage">
+                  <button onClick={handleResetPass} ><a className="link link-hover">Forgot password?</a></button>
+          </Link>
+          
 
           <button  type='submit' className="btn btn-neutral mt-4 hover:bg-gray-700">Login</button>
    

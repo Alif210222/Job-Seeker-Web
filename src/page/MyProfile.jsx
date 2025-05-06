@@ -31,10 +31,19 @@ const MyProfile = () => {
     <h3 className=' text-[16px] font-bold'>User's type:<span className='text-[16px] font-medium text-green-500'> Verified</span> </h3>
     <h3 className='text-[16px] font-bold'>User's Email: <span className='font-semibold text-red-600'>{user && user.email}</span> </h3>
    
-    <div className="card-actions mt-10">
+    <div className="card-actions mt-10 ">
+
+
+
         <Link to="/">
-              <button className="btn btn-primary">Back to Home</button>
+              <button className="btn btn-primary hover:bg-blue-500">Back to Home</button>
         </Link>
+        
+        <Link to="/updateProfile">
+              <button className="btn bg-green-500 hover:bg-green-400 ml-6">Update Profile</button>
+        </Link>
+
+
      
     </div>
   </div>
