@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 
-import banner from ".././assets/job seeker banner.avif"
+// import banner from ".././assets/job seeker banner.avif"
 import JobSection from '../Components/JobSection';
 import { useLoaderData } from 'react-router';
 import Counter from '../Components/Counter';
 import WebSiteWork from '../Components/WebSiteWork';
 import { Helmet } from 'react-helmet-async';
+import Banner from '../Components/MainBanner';
+// import Banner from '../Components/Banner';
 
 
 
@@ -23,9 +25,13 @@ const Home = () => {
                <Helmet>
                   <title>Home page </title>
                </Helmet>
+     
+               {/* this is banner  */}
 
-
-             <div className='w-full md:flex justify-between gap-6 md:p-10 p-3 items-center border-2 border-sky-300 rounded-2xl bg-sky-100'>
+                 <Banner />
+     
+    
+             {/* <div className='w-full md:flex justify-between gap-6 md:p-10 p-3 items-center border-2 border-sky-300 rounded-2xl bg-sky-100'>
                 <div className=''>
                     <h1 className='md:text-3xl lg:text-6xl font-semibold mb-8'>Find your dream <br /> job today.....</h1>
                     <p className='mb-8'>Discover thousands of jobs tailored to your skills and goals. Whether you're starting out or looking for a fresh start, we’re here to help you take the next step in your career journey.</p>
@@ -33,7 +39,10 @@ const Home = () => {
                          <button className='md:text-xl border-2 border-white bg-gray-500 p-3 rounded-2xl shadow-2xl hover:bg-gray-400 hover:text-white duration-300'>Explore Now</button>
                 </div>
                 <img className='lg:w-[700px] md:w-[400px] w-full lg:h-[450px] md:h-[400px] mt-6 md:mt-0'  src={banner} alt="" />
-             </div>
+             </div> */}
+
+
+
 
              {/* after banner */}
 
@@ -56,7 +65,7 @@ const Home = () => {
 
                 {/* company section  */}
                 <div className='p-8'>
-                           <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-2 border-sky-300 rounded-2xl p-6 mt-4 '>
+                           <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  rounded-2xl p-6 mt-4 '>
 
                              {
                                   data.map(company=> <JobSection key={company.id} company={company}></JobSection>)
@@ -64,10 +73,10 @@ const Home = () => {
 
                           </div>
                 </div>
-              
-               <div className='mt-18 '>
+
+                   
                    <Counter></Counter>
-               </div>
+               
               
         </div>
     );

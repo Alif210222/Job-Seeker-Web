@@ -4,9 +4,11 @@ import { AuthContext } from '../AuthProvider/AuthContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
 import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
 
 const Register = () => {
   const  {createUser,updateUser,setUser} = use(AuthContext)
+  const [passerror,setpasserror] = useState('')
   const navigate = useNavigate()
 
 
@@ -41,6 +43,11 @@ const Register = () => {
             const photo = e.target.photo.value 
             const email = e.target.email.value
             const password= e.target.password.value  
+
+            if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+              console.log("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.");
+              setpasserror("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.")
+            }
 
         //    console.log(name,photo,email,password) 
 
@@ -84,18 +91,19 @@ const Register = () => {
         <form onSubmit={handleRegister} className="fieldset">
 
           <label className="label">Name</label>
-          <input type="text" className="input" name="name" placeholder="Type your name"  required/>
+          <input type="text" className="input" name="name" placeholder="Type your name"  />
           {/* <p className='text-md text-red-600 '></p> */}
 
           <label className="label">Photo Url</label>
-          <input type="text" className="input" name="photo" placeholder="Photo Url" required/>
+          <input type="text" className="input" name="photo" placeholder="Photo Url" />
 
           <label className="label">Email</label>
-          <input type="email" className="input" name="email" placeholder="Email" required/>
+          <input type="email" className="input" name="email" placeholder="Email" />
 
 
           <label className="label">Password</label>
           <input type="password" className="input" name="password" placeholder="Password" required />
+          <p className='text-red-500'>{passerror}</p>
           
           <button type='submit' className="btn btn-neutral mt-4 hover:bg-gray-600">Register</button>
         </form>

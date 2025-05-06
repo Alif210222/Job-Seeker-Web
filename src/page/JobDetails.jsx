@@ -20,7 +20,7 @@ const JobDetails = () => {
 
 
     return (
-        <div className='mt-16 md:p-16 p-6'>
+        <div  className='mt-16 md:p-16 p-6'>
             <h1 className='md:text-3xl font-medium text-blue-500 mb-10 border-2  text-center p-2 rounded-2xl ' >Available job of this Company</h1>
             <div className=' p-8 md:p-20 grid grid-cols-1 gap-10'>
                {

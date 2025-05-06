@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
@@ -7,6 +7,10 @@ import { Helmet } from 'react-helmet-async';
 
 const LogIn = () => {
     const {loginUser,setUser} = use(AuthContext)
+    const [error , setError] = useState('')
+    const emailRef = useRef()
+    
+    
     const navigate = useNavigate()
     const location = useLocation()
     // console.log(location)
@@ -26,6 +30,7 @@ const LogIn = () => {
             })  
             .catch(error=>{
              console.log(error)
+             setError(error)
             })
 
           }
@@ -53,22 +58,26 @@ const LogIn = () => {
 
           })
           .catch(error=>{
-             console.log(error)
+             console.log(error.code)
+             setError(error.code)
+            
           })
 
 
+          console.log(emailRef.current.value)
 
      }
 
            // reset password section 
             const handleResetPass = ()=>{
-                console.log("reset password clicked")
+                const value = emailRef.current.value
+                console.log(value)
+                navigate("/resetPage", {state:value})
+
+               
             }
 
-         //reset password 
-
-
-
+        
 
     return (
         <div>
@@ -88,16 +97,16 @@ const LogIn = () => {
           <label className="label">Email</label>
 
                                   {/* user log in korle user er email reset password field e dite hobe    ref={emailRef} */}
-          <input type="email" className="input" name='email'  placeholder="Email" />
+          <input type="email" className="input" name='email'  placeholder="Email" ref={emailRef} required/>
           <label className="label">Password</label>
-          <input type="password" className="input" name='password' placeholder="Password" />
-          {/* <p className='text-md text-red-600 '> password </p> */}
-          <Link to="/resetPage">
-                  <button onClick={handleResetPass} ><a className="link link-hover text-red-500">Forgot password?</a></button>
-          </Link>
+          <input type="text" className="input" name='password' placeholder="Password"  />
+          <p className='text-md text-red-600 text-[14px] mb-4'>{error} </p>
+         
+                  <button  type='submit' onClick={handleResetPass} className="link link-hover  text-red-500 mt-3">Forgot password?</button>
+         
           
 
-          <button  type='submit' className="btn btn-neutral mt-4 hover:bg-gray-700">Login</button>
+          <button   className="btn btn-neutral mt-4 hover:bg-gray-700">Login</button>
    
         </form>
 

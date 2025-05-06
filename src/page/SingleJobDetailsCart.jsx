@@ -1,16 +1,53 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 import { Helmet } from 'react-helmet-async';
 
+
+
 const SingleJobDetailsCart = ({job,findJob}) => {
+  const detailsRef = useRef(null);
+
+  useEffect(() => {
+    const anim = gsap.fromTo(
+      detailsRef.current,
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: detailsRef.current,
+          start: 'top 80%',
+          toggleActions: 'restart none none none', // Re-run every scroll into view
+        },
+      }
+    );
+
+    return () => {
+      anim.scrollTrigger?.kill(); // Clean up animation on unmount
+    };
+  }, []);
+
+
+
+
+
+
+
+
     //    console.log(job)
     return (
-        <div className='border-2 rounded-2xl bg-sky-100 border-sky-300 p-3'>
+        <div ref={detailsRef} className='border-2 rounded-2xl bg-sky-100 border-sky-300 p-3'>
 
               <Helmet>
                 <title>Company Details</title>
               </Helmet>
            
-            <div className="  md:flex items-center  bg-base-100  shadow-sm border  border-sky-300 rounded-lg ">
+            <div   className="  md:flex items-center  bg-base-100  shadow-sm border  border-sky-300 rounded-lg ">
   <figure className='p-2'>
     <img
     className='md:h-[250px] md:w-[700px]'

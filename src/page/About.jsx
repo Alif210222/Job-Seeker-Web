@@ -1,7 +1,69 @@
-import React from "react";
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Helmet } from "react-helmet-async";
 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 const About = () => {
+
+    
+    const aboutcardRef = useRef(null);
+    const aboutRef = useRef(null);
+   
+
+  useEffect(() => {
+    const anim = gsap.fromTo(
+        aboutRef.current,
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: 'top 80%',
+          toggleActions: 'restart none none none', // Re-run every scroll into view
+        },
+      }
+    );
+
+    return () => {
+      anim.scrollTrigger?.kill(); // Clean up animation on unmount
+    };
+  }, []);
+
+
+//   about card animation 
+  useEffect(() => {
+    const anim = gsap.fromTo(
+        aboutcardRef.current,
+      { x: 100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 4,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: aboutcardRef.current,
+          start: 'top 80%',
+          toggleActions: 'restart none none none', // Re-run every scroll into view
+        },
+      }
+    );
+
+    return () => {
+      anim.scrollTrigger?.kill(); // Clean up animation on unmount
+    };
+  }, []);
+
+
+
+
   const cards = [
     {
       title: "Our Mission",
@@ -27,7 +89,7 @@ const About = () => {
           <title>About page</title>
        </Helmet>
    
-    <section className="bg-white py-16 px-6 sm:px-10 md:px-20 lg:px-32">
+    <section ref={aboutRef} className="bg-white py-16 px-6 sm:px-10 md:px-20 lg:px-32">
         
       <div className="max-w-6xl mx-auto">
      
@@ -42,7 +104,7 @@ const About = () => {
         </p>
 
         {/* Cards Section */}
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16">
+        <div ref={aboutcardRef}  className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -54,6 +116,9 @@ const About = () => {
             </div>
           ))}
         </div>
+        
+      
+
       </div>
     </section>
 

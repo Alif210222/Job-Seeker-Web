@@ -1,18 +1,47 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FaLocationDot } from "react-icons/fa6";
 import { BsFillHouseGearFill } from "react-icons/bs";
 import { Link } from 'react-router';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 const JobSection = ({company}) => {
-        // console.log(data)
-      
-        //  console.log(company)
+
+
+    const bannerRef = useRef(null);
+
+  useEffect(() => {
+    const anim = gsap.fromTo(
+      bannerRef.current,
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 3,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: bannerRef.current,
+          start: 'top 80%',
+          toggleActions: 'restart none none none', // Re-run every scroll into view
+        },
+      }
+    );
+
+    return () => {
+      anim.scrollTrigger?.kill(); // Clean up animation on unmount
+    };
+  }, []);
+
+       
 
 
     return (
 
-        <div className=''>
+        <div ref={bannerRef} className=''>
         
          {/* company cart */}
             <div className="card h-[280px]  bg-[#faf2d6] card-md shadow-sm transform transition duration-500 hover:rotate-1 hover:scale-105 shadow hover:shadow-xl cursor-pointer">

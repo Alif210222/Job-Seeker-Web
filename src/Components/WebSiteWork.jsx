@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const WebSiteWork = () => {
+
+    const workRef = useRef(null);
+
+    useEffect(() => {
+        const anim = gsap.fromTo(
+            workRef.current,
+          { x: 100, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 4,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: workRef.current,
+              start: 'top 80%',
+              toggleActions: 'restart none none none', // Re-run every scroll into view
+            },
+          }
+        );
+    
+        return () => {
+          anim.scrollTrigger?.kill(); // Clean up animation on unmount
+        };
+      }, []);
+
+    
+  
     return (
-        <div className=' mt-30 flex flex-col justify-center '>
+        <div   ref={workRef}   className=' mt-30 flex flex-col justify-center '>
               
              <h1 className='lg:w-[600px]  lg:ml-98 mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'>How this website works</h1>   
              {/* website working system */}
