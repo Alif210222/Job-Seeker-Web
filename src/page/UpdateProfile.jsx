@@ -28,7 +28,7 @@ const UpdateProfile = () => {
             displayName: name, photoURL: photo
           }).then(() => {
             setLoading(true)
-            console.log(user)
+            // console.log(user)
 
             setUser({...user , displayName : name , photoURL :photo})
 
@@ -67,7 +67,7 @@ const UpdateProfile = () => {
             <Link to="/profile">
                   <button type='submit' className='btn bg-blue-500 mt-8 hover:bg-blue-400'>Back</button>
             </Link>
-            
+
             <button type='submit' className='btn bg-green-500 mt-8 hover:bg-green-600'>Update Information</button>
                
            </div>

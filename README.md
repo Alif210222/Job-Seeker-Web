@@ -1,15 +1,21 @@
-# React + Vite
+# Name of this project - **Job Seeker BD**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Purpose of this website : 
+   > To help people  find their job without any  suffering. 
+   > And also candidate can see multiple companies job post in one site, this things is very helpful.
 
 
-# 
+### key features:
+    1.Candidate can see multiple companies job post in one site.
+    2.Also they can see specific company details and also know about their job post detailed.
+    3.If any candidate want to apply , then they can apply those company from this websites page.
+    4.User can see their profile and update profile .
+    5.only the register user can see their profile page and company or job details .
+    6.Users can see which number of people are using this website and which number of people get help or job by this site.
+    7.Its a ser friendly site that help the user guide how to do apply.
+
+
+use `npm react icons , npm react helmet , npm react toast`
+
+
+# [Visit live site link](https://google.com)

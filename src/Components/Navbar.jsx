@@ -51,7 +51,7 @@ const Navbar = () => {
 
     {
       user && (  
-        <Link to='/profile' className=' border border-sky-400  rounded-full   border-sky-500   hover:shadow-2xl hidden md:flex'>
+        <Link to='/profile' className=' border  rounded-full   border-sky-500   hover:shadow-2xl hidden md:flex'>
                <img className='w-10 h-10 rounded-full' src={user ? user.photoURL : userimg} alt="" />
         </Link>
 

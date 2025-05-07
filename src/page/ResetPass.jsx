@@ -14,7 +14,7 @@ const ResetPass = () => {
         // reset password section 
                 const handleResetPass = ()=>{
                     const value = emailRef.current.value
-                      alert("a password reset email send in your gmail")
+                      alert("A password reset email send in your gmail.Please check & change your password !")
                     // console.log(value)
                    sendPasswordResetEmail(auth,value)
                    .then(()=>{
