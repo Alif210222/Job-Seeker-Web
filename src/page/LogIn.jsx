@@ -1,7 +1,7 @@
 import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../AuthProvider/AuthContext';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
 import { Helmet } from 'react-helmet-async';
 
@@ -29,7 +29,7 @@ const LogIn = () => {
             // navigate("/")
             })  
             .catch(error=>{
-             console.log(error)
+            //  console.log(error)
              setError(error)
             })
 
@@ -58,23 +58,20 @@ const LogIn = () => {
 
           })
           .catch(error=>{
-             console.log(error.code)
+            //  console.log(error.code)
              setError(error.code)
             
           })
 
 
-          console.log(emailRef.current.value)
+        
 
      }
 
-           // reset password section 
+        //    reset password section 
             const handleResetPass = ()=>{
                 const value = emailRef.current.value
-                console.log(value)
-                navigate("/resetPage", {state:value})
-
-               
+                navigate("/resetPage", {state:value})  
             }
 
         
@@ -99,7 +96,7 @@ const LogIn = () => {
                                   {/* user log in korle user er email reset password field e dite hobe    ref={emailRef} */}
           <input type="email" className="input" name='email'  placeholder="Email" ref={emailRef} required/>
           <label className="label">Password</label>
-          <input type="text" className="input" name='password' placeholder="Password"  />
+          <input type="password" className="input" name='password' placeholder="Password" required />
           <p className='text-md text-red-600 text-[14px] mb-4'>{error} </p>
          
                   <button  type='submit' onClick={handleResetPass} className="link link-hover  text-red-500 mt-3">Forgot password?</button>

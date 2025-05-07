@@ -34,11 +34,6 @@ const SingleJobDetailsCart = ({job,findJob}) => {
 
 
 
-
-
-
-
-
     //    console.log(job)
     return (
         <div ref={detailsRef} className='border-2 rounded-2xl bg-sky-100 border-sky-300 p-3'>

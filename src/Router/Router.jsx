@@ -43,7 +43,7 @@ import ErrorPage from '../page/ErrorPage.jsx';
             path:"/jobDetails/:id",
             loader:()=>fetch("/jobdata.json"),
             HydrateFallback:Loading,
-            Component:JobDetails
+            element:<PrivetRoute><JobDetails></JobDetails></PrivetRoute>
         },
         {
             path:"/profile",

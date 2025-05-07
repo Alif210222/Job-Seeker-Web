@@ -242,6 +242,21 @@
                     "Knowledge of sensors and control systems",
                     "Problem-solving and innovation skills"
                 ]
+            },
+            {
+                "id": "job-007",
+                "title": "Course Content Developer",
+                "bannerImage": "https://media.istockphoto.com/id/1593529081/vector/full-stack-developer-programmer-who-can-work-with-software-and-hardware-part-of-the-service.jpg?s=612x612&w=0&k=20&c=fb4MT_dS11ardFe9YXeqDaJulfMhCo2PB5q9ITa9Tp0=",
+                "location": "Remote",
+                "salary": "$50,000 - $75,000",
+                "jobType": "Part-time",
+                "description": "Design and create educational content for online courses.",
+                "requirements": [
+                    "Excellent writing and editing skills",
+                    "Subject matter expertise",
+                    "Familiarity with LMS platforms",
+                    "Instructional design experience"
+                ]
             }
         ]
     },

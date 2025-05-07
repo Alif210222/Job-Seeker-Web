@@ -44,7 +44,7 @@ const JobSection = ({company}) => {
         <div ref={bannerRef} className=''>
         
          {/* company cart */}
-            <div className="card h-[280px]  bg-[#faf2d6] card-md shadow-sm transform transition duration-500 hover:rotate-1 hover:scale-105 shadow hover:shadow-xl cursor-pointer">
+            <div className="card h-[280px]  bg-[#faf2d6] card-md  transform transition duration-500 hover:rotate-1 hover:scale-105 shadow hover:shadow-xl cursor-pointer">
                  <div className="card-body space-y-4">
                     <Link to={`/jobDetails/${company.id}`}>
                           <button className='cursor-pointer flex gap-2 hover:shadow-2xl '>

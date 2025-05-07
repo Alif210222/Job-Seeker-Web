@@ -35,6 +35,8 @@ const AuthProvider = ({children}) => {
         return updateProfile(auth.currentUser,updateData )
     }
 
+    
+
 
 
     // state change functionality added 
@@ -55,6 +57,7 @@ const AuthProvider = ({children}) => {
     const userInfo ={
         user,
         loading,
+        setLoading,
         setUser,
         createUser,
         loginUser,

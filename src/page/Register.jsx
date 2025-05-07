@@ -26,7 +26,7 @@ const Register = () => {
                  // navigate("/")
                  })  
                  .catch(error=>{
-                  console.log(error)
+                  // console.log(error)
                  })
      
                }
@@ -68,7 +68,7 @@ const Register = () => {
 
         })
         .catch(error=>{
-             console.log(error)
+            //  console.log(error)
         })
 
 
