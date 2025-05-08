@@ -5,6 +5,7 @@ import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
   const  {createUser,updateUser,setUser} = use(AuthContext)
@@ -24,6 +25,8 @@ const Register = () => {
                  //  console.log(result)
                   setUser(result.user)
                   navigate(location?.state || "/")
+                  toast(" Login with Google  successful")
+
                  // navigate("/")
                  })  
                  .catch(error=>{
@@ -65,6 +68,7 @@ const Register = () => {
                 setUser({...user , displayName : name , photoURL :photo})
 
                 navigate("/")
+                toast("Signup successful !")
               })
 
 

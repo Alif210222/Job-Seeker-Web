@@ -4,6 +4,7 @@ import { AuthContext } from '../AuthProvider/AuthContext';
 import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
 import { Helmet } from 'react-helmet-async';
+import { ToastContainer, toast } from 'react-toastify';
 
 const LogIn = () => {
     const {loginUser,setUser} = use(AuthContext)
@@ -25,6 +26,7 @@ const LogIn = () => {
            .then(result =>{
             //  console.log(result)
              setUser(result.user)
+             toast("Login successful")
              navigate(location?.state || "/")
             // navigate("/")
             })  
@@ -52,7 +54,9 @@ const LogIn = () => {
             const user = result.user
             // console.log(user)
             setUser(user)
+              toast("Login successful")
             navigate(location?.state || "/" )
+          
             // navigate("/")
 
 

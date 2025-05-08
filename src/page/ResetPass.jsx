@@ -1,8 +1,9 @@
-import React, { use, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { AuthContext } from '../AuthProvider/AuthContext';
-import { Navigate, useLocation, useNavigate } from 'react-router';
+import { Navigate, useLocation } from 'react-router';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../AuthProvider/firebase.config';
+
 
 const ResetPass = () => {
     const location = useLocation()
@@ -13,18 +14,17 @@ const ResetPass = () => {
 
         // reset password section 
                 const handleResetPass = ()=>{
+                   
                     const value = emailRef.current.value
-                      alert("A password reset email send in your gmail.Please check & change your password !")
+                     
                     // console.log(value)
                    sendPasswordResetEmail(auth,value)
                    .then(()=>{
-                    // alert("a password reset email send in your gmail")
+                
                    })
                    .catch(error=>{
                     console.log(error)
                    })
-    
-                    // navigate("/resetPage", {state:value})
     
                    
                 }

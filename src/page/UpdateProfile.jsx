@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { auth } from '../AuthProvider/firebase.config';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import { use } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const UpdateProfile = () => {
 
@@ -31,6 +32,7 @@ const UpdateProfile = () => {
             // console.log(user)
 
             setUser({...user , displayName : name , photoURL :photo})
+            toast("Profile update successful")
 
           }).catch((error) => {
            console.log(error)
