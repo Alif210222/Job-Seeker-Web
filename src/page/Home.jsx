@@ -41,8 +41,8 @@ const Home = () => {
 
 
           {/* job section  */}
-                <div className='mt-40'>
-                  <p className='lg:w-[600px]  lg:ml-98 mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'> Choose your favourite company </p>
+                <div className='mt-40 '>
+                  <p className='lg:w-[600px]   mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium mx-auto'> Choose your favourite company </p>
         
                    <div className='flex items-center gap-10 mt-14'>
                      <h1 className='text-3xl font-bold underline ml-6'>All Company :</h1>

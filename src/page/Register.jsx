@@ -9,6 +9,7 @@ import { useState } from 'react';
 const Register = () => {
   const  {createUser,updateUser,setUser} = use(AuthContext)
   const [passerror,setpasserror] = useState('')
+  const [error,setError] = useState('')
   const navigate = useNavigate()
 
 
@@ -26,7 +27,7 @@ const Register = () => {
                  // navigate("/")
                  })  
                  .catch(error=>{
-                  // console.log(error)
+                  setError(error.code)
                  })
      
                }
@@ -45,8 +46,9 @@ const Register = () => {
             const password= e.target.password.value  
 
             if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
-              console.log("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.");
+              // console.log("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.");
               setpasserror("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.")
+              return;
             }
 
         //    console.log(name,photo,email,password) 
@@ -68,10 +70,10 @@ const Register = () => {
 
         })
         .catch(error=>{
-            //  console.log(error)
+             console.log(error.code)
+              setError(error.code)
+              return;
         })
-
-
 
       } 
 
@@ -91,14 +93,14 @@ const Register = () => {
         <form onSubmit={handleRegister} className="fieldset">
 
           <label className="label">Name</label>
-          <input type="text" className="input" name="name" placeholder="Type your name"  />
+          <input type="text" className="input" name="name" placeholder="Type your name" required />
           {/* <p className='text-md text-red-600 '></p> */}
 
           <label className="label">Photo Url</label>
-          <input type="text" className="input" name="photo" placeholder="Photo Url" />
+          <input type="text" className="input" name="photo" placeholder="Photo Url" required/>
 
           <label className="label">Email</label>
-          <input type="email" className="input" name="email" placeholder="Email" />
+          <input type="email" className="input" name="email" placeholder="Email" required/>
 
 
           <label className="label">Password</label>
@@ -114,7 +116,9 @@ const Register = () => {
                <button onClick={handleGoogleLogin}  type='submit' className="btn bg-white text-black border-[#e5e5e5]">
              <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
                   Login with Google
-              </button>    
+              </button> 
+
+                <p className='text-md text-red-600 '>{error}</p>   
 
 
 

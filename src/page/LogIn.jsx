@@ -30,7 +30,7 @@ const LogIn = () => {
             })  
             .catch(error=>{
             //  console.log(error)
-             setError(error)
+             setError(error.code)
             })
 
           }

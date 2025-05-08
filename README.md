@@ -18,4 +18,4 @@
 use `npm react icons , npm react helmet , npm react toast`
 
 
-# [Visit live site link](https://google.com)
+# [Visit live site link](https://job-seeker-bd.netlify.app/)

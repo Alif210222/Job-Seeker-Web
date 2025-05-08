@@ -98,11 +98,11 @@
     },
     {
         "id": 3,
-        "name": "HealthSync Systems",
+        "name": "AutoMinds Robotics",
         "logo": "https://image.shutterstock.com/image-vector/people-goup-logotype-logo-general-260nw-669754087.jpg",
         "location": "New York, NY",
-        "website": "https://healthsync.com",
-        "industry": "Healthcare IT Limited",
+        "website": "https://clutch.co/bd/developers/artificial-intelligence/robotics",
+        "industry": "AutoMinds Robotics Limited",
         "jobs": [
             {
                 "id": "job-004",

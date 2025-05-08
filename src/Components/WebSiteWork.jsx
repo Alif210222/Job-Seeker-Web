@@ -34,14 +34,14 @@ const WebSiteWork = () => {
     
   
     return (
-        <div   ref={workRef}   className=' mt-40 flex flex-col justify-center '>
+        <div     className=' mt-40 flex flex-col justify-center '>
               
-             <h1 className='lg:w-[600px] mb-10 lg:ml-98 mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'>How this website works</h1>   
+             <h1 className='lg:w-[600px] mb-10 mx-auto mt-3 p-2 bg-sky-100 rounded flex items-center justify-center text-3xl font-medium'>How this website works</h1>   
              {/* website working system */}
-             <div className='md:ml-34'>
+             <div   ref={workRef}   className='mx-auto'>
 
          
-             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-14    '>
+             <div className='grid grid-cols-1 md:grid-cols-2 gap-30 mt-14 '>
                  
                   <div className="card  md:w-70 lg:w-96 bg-[#f9e392] border-[#f4c41a] card-md shadow-sm border-2 ">
                        <div className="card-body">
