@@ -20,6 +20,8 @@ const ResetPass = () => {
                     // console.log(value)
                    sendPasswordResetEmail(auth,value)
                    .then(()=>{
+
+                //    window.location.href='https://mail.google.com'
                 
                    })
                    .catch(error=>{

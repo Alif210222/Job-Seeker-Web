@@ -11,7 +11,7 @@ const Root = () => {
             <header >
                <Navbar  ></Navbar>
             </header>
-           <div className='bg-gray-100'>
+           <div className='bg-gradient-to-br from-cyan-100 via-blue-200 to-indigo-300   '>
               <Outlet></Outlet>
 
            </div>

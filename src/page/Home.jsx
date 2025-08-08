@@ -21,7 +21,7 @@ const Home = () => {
 
 
     return (
-        <div className='md:p-16 p-6'>
+        <div className='md:p-16 p-6  '>
                
                <Helmet>
                   <title>Home page </title>
